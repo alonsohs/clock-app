@@ -7,7 +7,7 @@ export const QuoteContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 20px;
   grid-template-rows: max-content max-content;
-  row-gap: 2rem;
+  gap: 2rem;
   
   
   p {
@@ -25,5 +25,12 @@ export const QuoteContainer = styled.div`
   
   h5  {
     font-size: 1.8rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    p, h5 {
+      font-size: 1.2rem;
+      line-height: 2.2rem;
+    }
   }
 `

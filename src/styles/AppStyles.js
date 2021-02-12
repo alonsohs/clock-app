@@ -1,6 +1,9 @@
 import styled, {css} from "styled-components";
 
-import backgroundImg from '../assets/desktop/bg-image-daytime.jpg'
+import bgDayDesktop from '../assets/desktop/bg-image-daytime.jpg'
+import bgDayTablet from '../assets/tablet/bg-image-daytime.jpg'
+import bgDayMobile from '../assets/mobile/bg-image-daytime.jpg'
+
 
 export const AppContainer = styled.div`
   min-height: 100vh;
@@ -15,11 +18,19 @@ export const AppContainer = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(${backgroundImg});
+    background-image: url(${bgDayDesktop});
     background-repeat: no-repeat;
     background-size: 100% 100vh;
     filter: brightness(60%);
     z-index: -1;
+
+    @media screen and (max-width: 994px) {
+      background-image: url(${bgDayTablet});
+    }
+
+    @media screen and (max-width: 767px) {
+      background-image: url(${bgDayMobile});
+    }
   }
 `
 
@@ -28,5 +39,9 @@ export const Slider = styled.div`
   
   ${props => props.showMore && css`
     transform: translateY(-50vh);
+
+    @media screen and (max-width: 994px) {
+      transform: translateY(-45vh);
+    }
   `}
 `

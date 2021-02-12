@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {GlobalStyle} from "./styles/GlobalStyles";
 
 import {AppContainer, Slider} from "./styles/AppStyles";

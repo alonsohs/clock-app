@@ -28,5 +28,18 @@ export const Button = styled.button`
   `}
   }
   
-  
+  @media screen and (max-width: 994px) {
+    justify-self: start;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 1.2rem;
+    letter-spacing: .3rem ;
+    height: 4rem;
+    width: 11.5rem;
+    
+    img {
+      height: 3rem;
+    }
+  }
 `

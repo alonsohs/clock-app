@@ -1,10 +1,10 @@
 import React from 'react'
 
-import {StatTitle, StatValue} from "./styles";
+import {Stat, StatTitle, StatValue} from "./styles";
 
 export const TimeStat = ({title, value}) => (
-    <div>
+    <Stat>
         <StatTitle>{title}</StatTitle>
         <StatValue>{value}</StatValue>
-    </div>
+    </Stat>
 )

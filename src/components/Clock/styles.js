@@ -18,6 +18,14 @@ export const Greeting = styled.div`
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-left: 2rem;
+
+    @media screen and (max-width: 994px) {
+      font-size: 1.8rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.5rem;
+    }
   }
 `
 
@@ -30,16 +38,43 @@ export const ClockTime = styled.div`
     font-weight: bold;
     line-height: 20rem;
     letter-spacing: -.5rem;
+    
+    @media screen and (max-width: 994px) {
+      font-size: 17.5rem;
+      line-height: 17.5rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 10rem;
+      line-height: 10rem;
+    }
   }
   
   h4 {
     font-size: 4.8rem;
     margin-left: 2rem;
+    font-weight: normal;
+    
+    @media screen and (max-width: 994px) {
+      font-size: 3.2rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.5rem;
+    }
   }
 `
 
 export const TimeZone = styled.h6`
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 2.4rem;
   letter-spacing: .48rem;
+
+  @media screen and (max-width: 994px) {
+    font-size: 1.8rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 1.5rem;
+  }
 `
