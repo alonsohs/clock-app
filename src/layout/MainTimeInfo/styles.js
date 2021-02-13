@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import {fadeIn} from "../../styles/animation";
 
 export const TimeInfoContainer  = styled.div`
   overflow: hidden;
@@ -14,6 +14,8 @@ export const TimeInfoContainer  = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "quote ." "clock button ";
+  
+  ${fadeIn({time: '2s'})};
   
   @media screen and (max-width: 994px) {
     padding: 5rem 10rem 5rem 5rem;

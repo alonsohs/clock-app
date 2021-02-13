@@ -43,12 +43,12 @@ export const useFetchTimeInfo = () => {
         const hour = date.getHours()
         let dayTime = null
 
-        if (hour >= 5 && hour < 12) {
-            dayTime = 'morning'
+        if (hour >= 18 && hour < 5) {
+            dayTime = 'evening'
         } else if (hour >= 12 && hour < 18) {
             dayTime = 'afternoon'
         } else {
-            dayTime = 'evening'
+            dayTime = 'morning'
         }
 
         setTimeData({

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const TimeStatsContainer = styled.div`
   width: 100%;
   height: 50vh;
-  background-color: rgba(255,255,255, .6);
+  background-color: ${props => props.daytime === 'evening' ? 'rgba(0, 0, 0, .7)' : 'rgba(255,255,255, .7)'};
   backdrop-filter: blur(40.7742px);
   position: relative;
 

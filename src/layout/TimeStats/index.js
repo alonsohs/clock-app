@@ -4,14 +4,14 @@ import {TimeStatsContainer, Wrapper} from "./styles";
 
 import {TimeStat} from "../../components/TimeStat";
 
-export const TimeStats = ({timezone, day_of_week, day_of_year, week_number}) => {
+export const TimeStats = ({timezone, day_of_week, day_of_year, week_number, daytime}) => {
     return (
-        <TimeStatsContainer>
+        <TimeStatsContainer daytime={daytime}>
             <Wrapper>
-                <TimeStat title={'Current timezone'} value={timezone}/>
-                <TimeStat title={'Day of the week'} value={day_of_week}/>
-                <TimeStat title={'Day of the year'} value={day_of_year}/>
-                <TimeStat title={'Week number'} value={week_number}/>
+                <TimeStat title={'Current timezone'} value={timezone}  daytime={daytime}/>
+                <TimeStat title={'Day of the week'} value={day_of_week} daytime={daytime}/>
+                <TimeStat title={'Day of the year'} value={day_of_year} daytime={daytime}/>
+                <TimeStat title={'Week number'} value={week_number} daytime={daytime}/>
             </Wrapper>
         </TimeStatsContainer>
     )

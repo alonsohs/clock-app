@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Stat = styled.div`
-  
+  color: ${props => props.daytime === 'evening' ? 'white' : 'black'};
   overflow: scroll;
   &::-webkit-scrollbar {
     display: none;

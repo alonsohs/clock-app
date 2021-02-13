@@ -15,27 +15,28 @@ export const App = () => {
     }
     const timeData = useFetchTimeInfo()
 
+    if(timeData.loading) {
+        return null
+    }
+
     return (
         <AppContainer daytime={timeData.dayTime}>
             <Slider showMore={showMore}>
                 <GlobalStyle/>
-                {!timeData.loading && (
-                        <>
-                            <MainTimeInfo
-                                handleShowMore={handleShowMore}
-                                showmore={showMore}
-                                time={timeData.info.datetime}
-                                abbreviation={timeData.info.abbreviation}
-                                daytime={timeData.dayTime}
-                            />
-                            <TimeStats
-                                timezone={timeData.info.timezone}
-                                day_of_week={timeData.info.day_of_week}
-                                day_of_year={timeData.info.day_of_year}
-                                week_number={timeData.info.week_number}
-                            />
-                        </>
-                )}
+                    <MainTimeInfo
+                        handleShowMore={handleShowMore}
+                        showmore={showMore}
+                        time={timeData.info.datetime}
+                        abbreviation={timeData.info.abbreviation}
+                        daytime={timeData.dayTime}
+                    />
+                    <TimeStats
+                        daytime={timeData.dayTime}
+                        timezone={timeData.info.timezone}
+                        day_of_week={timeData.info.day_of_week}
+                        day_of_year={timeData.info.day_of_year}
+                        week_number={timeData.info.week_number}
+                    />
             </Slider>
         </AppContainer>
     )
