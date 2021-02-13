@@ -4,15 +4,15 @@ import {Button} from "./styles";
 
 import arrowIcon from '../../assets/desktop/icon-arrow-up.svg'
 
-export const MoreLessButton = ({handleShowMore, showMore}) => {
+export const MoreLessButton = ({handleShowMore, showmore}) => {
     return (
-        <Button onClick={handleShowMore} showMore={showMore}>
+        <Button onClick={handleShowMore} showmore={showmore}>
             {
-                showMore
+                showmore
                     ? 'Less'
                     : 'More'
             }
-            <img src={arrowIcon} alt="arrow" showMore={showMore}/>
+            <img src={arrowIcon} alt="arrow" showmore={showmore}/>
         </Button>
     )
 }

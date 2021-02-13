@@ -7,10 +7,10 @@ import {Quote} from "../../components/Quote";
 import {MoreLessButton} from "../../components/MoreLessButton";
 
 
-export const MainTimeInfo = ({handleShowMore, showMore}) => (
+export const MainTimeInfo = ({handleShowMore, showmore, time, abbreviation, daytime}) => (
     <TimeInfoContainer>
         <Quote/>
-        <Clock/>
-        <MoreLessButton handleShowMore={handleShowMore} showMore={showMore}/>
+        <Clock time={time} abbreviation={abbreviation} daytime={daytime}/>
+        <MoreLessButton handleShowMore={handleShowMore} showmore={showmore}/>
     </TimeInfoContainer>
 )

@@ -1,19 +1,36 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 import {QuoteContainer} from "./styles";
 
 import refreshIcon from '../../assets/desktop/icon-refresh.svg'
 
 export const Quote = () => {
-    const content = "I care not so much what I am to others as what I am to myself. I will be rich by myself, and not by borrowing."
-    const author = "Michel de Montaigne"
+
+    const [quote, setQuote] = useState({
+        content: '',
+        author: '',
+    })
+
+    const fetchQuote = async () => {
+        const response = await fetch('https://api.quotable.io/random')
+        const data = await response.json()
+
+        setQuote({
+            ...data
+        })
+    }
+
+    useEffect(() => {
+        fetchQuote()
+    }, [])
+
     return (
         <QuoteContainer>
-            <p>{content}</p>
-            <button>
+            <p>{quote.content}</p>
+            <button onClick={fetchQuote}>
                 <img src={refreshIcon} alt="refresh"/>
             </button>
-            <h5>{author}</h5>
+            <h5>{quote.author}</h5>
         </QuoteContainer>
     )
 }

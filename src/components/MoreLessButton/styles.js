@@ -23,7 +23,7 @@ export const Button = styled.button`
   
   img {
     transition: transform 1s ease;
-    ${props => props.showMore && css`
+    ${props => props.showmore && css`
       transform: rotate(180deg);
   `}
   }

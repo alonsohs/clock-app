@@ -4,13 +4,15 @@ import {TimeStatsContainer, Wrapper} from "./styles";
 
 import {TimeStat} from "../../components/TimeStat";
 
-export const TimeStats = () => (
-    <TimeStatsContainer>
-        <Wrapper>
-            <TimeStat title={'Current timezone'} value={'Europe/London'}/>
-            <TimeStat title={'Day of the week'} value={'5'}/>
-            <TimeStat title={'Day of the year'} value={'295'}/>
-            <TimeStat title={'Week number'} value={'42'}/>
-        </Wrapper>
-    </TimeStatsContainer>
-)
+export const TimeStats = ({timezone, day_of_week, day_of_year, week_number}) => {
+    return (
+        <TimeStatsContainer>
+            <Wrapper>
+                <TimeStat title={'Current timezone'} value={timezone}/>
+                <TimeStat title={'Day of the week'} value={day_of_week}/>
+                <TimeStat title={'Day of the year'} value={day_of_year}/>
+                <TimeStat title={'Week number'} value={week_number}/>
+            </Wrapper>
+        </TimeStatsContainer>
+    )
+}

@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
 export const Stat = styled.div`
+  
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   @media screen and (max-width: 767px) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 `
 
