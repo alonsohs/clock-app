@@ -24,7 +24,6 @@ export const useFetchTimeInfo = () => {
                 info
             })
 
-            console.log(info)
         } catch (e) {
             setTimeData({
                 ...timeData,
@@ -43,7 +42,7 @@ export const useFetchTimeInfo = () => {
         const hour = date.getHours()
         let dayTime = null
 
-        if (hour >= 18 && hour < 5) {
+        if (hour >= 18 || hour < 5) {
             dayTime = 'evening'
         } else if (hour >= 12 && hour < 18) {
             dayTime = 'afternoon'
